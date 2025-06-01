@@ -87,3 +87,15 @@ const differenceEvenOdd = (numbers: number[]): number => {
   return sumEven - sumOdd;
 };
 console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
+
+// Challenge 9: Count Truthy
+const countTruthy = (object: any): number => {
+  let count = 0;
+  for (const key in object) {
+    if (object[key]) count++;
+  }
+  return count;
+};
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
+
+// Challenge 10: Average of Numbers

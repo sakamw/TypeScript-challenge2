@@ -72,3 +72,28 @@ var sumEvenNumbers = function (even) {
     return sum;
 };
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
+// Challenge 8: Difference Between Sum of Even and Odd Numbers
+var differenceEvenOdd = function (numbers) {
+    var sumEven = 0;
+    var sumOdd = 0;
+    for (var _i = 0, numbers_3 = numbers; _i < numbers_3.length; _i++) {
+        var num = numbers_3[_i];
+        if (num % 2 === 0) {
+            sumEven += num;
+        }
+        else
+            sumOdd += num;
+    }
+    return sumEven - sumOdd;
+};
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6]));
+// Challenge 9: Count Truthy
+var countTruthy = function (object) {
+    var count = 0;
+    for (var key in object) {
+        if (object[key])
+            count++;
+    }
+    return count;
+};
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
