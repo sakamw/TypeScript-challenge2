@@ -137,3 +137,17 @@ const linearSearchAll = (array: number[], value: number): number[] => {
 };
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
+
+// Challenge 14: Count Occurences
+const countOccurences = (array: string[]): { [key: string]: number } => {
+  let count: { [key: string]: number } = {};
+  for (let item of array) {
+    if (count[item]) {
+      count[item] += 1;
+    } else count[item] = 1;
+  }
+  return count;
+};
+console.log(
+  countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"])
+);

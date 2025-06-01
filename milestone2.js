@@ -129,3 +129,28 @@ var reverseLinearSearch = function (array, value) {
 };
 console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7));
 console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10));
+// Challenge 13: Linear Search All Indices
+var linearSearchAll = function (array, value) {
+    var indices = [];
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] === value)
+            indices.push(i);
+    }
+    return indices;
+};
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
+// Challenge 14: Count Occurences
+var countOccurences = function (array) {
+    var count = {};
+    for (var _i = 0, array_1 = array; _i < array_1.length; _i++) {
+        var item = array_1[_i];
+        if (count[item]) {
+            count[item] += 1;
+        }
+        else
+            count[item] = 1;
+    }
+    return count;
+};
+console.log(countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"]));
