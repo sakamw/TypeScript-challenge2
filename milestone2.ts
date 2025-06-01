@@ -99,3 +99,10 @@ const countTruthy = (object: any): number => {
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null }));
 
 // Challenge 10: Average of Numbers
+const average = (numbers: number[]): number => {
+  if (numbers.length === 0) return 0;
+  let sum = 0;
+  for (const num of numbers) sum += num;
+  return sum / numbers.length;
+};
+console.log(average([2, 4, 6, 8]));
