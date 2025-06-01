@@ -45,8 +45,19 @@ var findLongestWord = function (words) {
     return longestWord;
 };
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"]));
-// Count Properties
+// Challenge 5: Count Properties
 var countProperties = function (object) {
     return Object.keys(object).length;
 };
 console.log(countProperties({ name: "Alice", age: 25, city: "Paris" }));
+// Challenge 6: Filter by Length
+var filterByLength = function (strings, minLenght) {
+    var result = [];
+    for (var _i = 0, strings_1 = strings; _i < strings_1.length; _i++) {
+        var str = strings_1[_i];
+        if (str.length >= minLenght)
+            result.push(str);
+    }
+    return result;
+};
+console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
