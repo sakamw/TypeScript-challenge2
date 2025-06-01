@@ -138,7 +138,7 @@ const linearSearchAll = (array: number[], value: number): number[] => {
 console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
 console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
 
-// Challenge 14: Count Occurences
+// Challenge 14: Count Occurrences
 const countOccurences = (array: string[]): { [key: string]: number } => {
   let count: { [key: string]: number } = {};
   for (let item of array) {
@@ -150,4 +150,30 @@ const countOccurences = (array: string[]): { [key: string]: number } => {
 };
 console.log(
   countOccurences(["apple", "banana", "apple", "orange", "banana", "apple"])
+);
+
+// Challenge 15: Remove Duplicates
+const removeDuplicates = (array: number[]): number[] => {
+  const mySet = new Set(array);
+  return Array.from(mySet);
+};
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
+
+// Challenge 16: Most Frequent
+const mostFrequent = (array: any[]): any => {
+  const frequent: { [key: string]: number } = {};
+  let maxCount = 0;
+  let mostFreq = array[0];
+  for (let item of array) {
+    frequent[item] = (frequent[item] || 0) + 1;
+    if (frequent[item] > maxCount) {
+      maxCount = frequent[item];
+      mostFreq = item;
+    }
+  }
+  return mostFreq;
+};
+console.log(mostFrequent([1, 2, 2, 3, 3, 3, 4]));
+console.log(
+  mostFrequent(["apple", "banana", "apple", "orange", "banana", "apple"])
 );
