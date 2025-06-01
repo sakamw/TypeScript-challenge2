@@ -7,3 +7,13 @@ const sumOfPositives = (numbers: number[]): number => {
   return sum;
 };
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8]));
+
+// Find Maximum Value
+const findMax = (numbers: number[]): number => {
+  let max = numbers[0];
+  for (const num of numbers) {
+    if (num > max) max = num;
+  }
+  return max;
+};
+console.log(findMax([3, 7, 2, 9, 5]));
