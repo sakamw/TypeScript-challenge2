@@ -63,3 +63,13 @@ const filterByLength = (strings: string[], minLenght: number): string[] => {
   return result;
 };
 console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
+
+// Chlallenge 7: Sum of Even Numbers
+const sumEvenNumbers = (even: number[]): number => {
+  let sum = 0;
+  for (const num of even) {
+    if (num % 2 === 0) sum += num;
+  }
+  return sum;
+};
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));

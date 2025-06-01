@@ -61,3 +61,14 @@ var filterByLength = function (strings, minLenght) {
     return result;
 };
 console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5));
+// Chlallenge 7: Sum of Even Numbers
+var sumEvenNumbers = function (even) {
+    var sum = 0;
+    for (var _i = 0, even_1 = even; _i < even_1.length; _i++) {
+        var num = even_1[_i];
+        if (num % 2 === 0)
+            sum += num;
+    }
+    return sum;
+};
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6]));
