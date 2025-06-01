@@ -56,7 +56,7 @@ console.log(countProperties({ name: "Alice", age: 25, city: "Paris" }));
 
 // Challenge 6: Filter by Length
 const filterByLength = (strings: string[], minLenght: number): string[] => {
-  const result: string[] = [];
+  const result = [];
   for (const str of strings) {
     if (str.length >= minLenght) result.push(str);
   }
@@ -126,3 +126,14 @@ const reverseLinearSearch = (array: number[], value: number): number => {
 };
 console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7));
 console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10));
+
+// Challenge 13: Linear Search All Indices
+const linearSearchAll = (array: number[], value: number): number[] => {
+  let indices = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) indices.push(i);
+  }
+  return indices;
+};
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7));
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10));
