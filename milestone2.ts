@@ -160,7 +160,7 @@ const removeDuplicates = (array: number[]): number[] => {
 console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5]));
 
 // Challenge 16: Most Frequent
-const mostFrequent = (array: any[]): any => {
+const mostFrequent = (array: (string | number)[]) => {
   const frequent: { [key: string]: number } = {};
   let maxCount = 0;
   let mostFreq = array[0];
